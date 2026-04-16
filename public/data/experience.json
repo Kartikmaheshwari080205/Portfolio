@@ -1,0 +1,51 @@
+[
+  {
+    "company": "Nielsen",
+    "companyLogo": "/images/companies/nielsen.png",
+    "location": "Bengaluru, Karnataka",
+    "roles": [
+      {
+        "title": "SDE Intern",
+        "from": "Jan 2026",
+        "to": "Present",
+        "highlights": [
+          "Built a Log Ingestion Proxy using Python, OpenTelemetry (OTLP), and SigNoz with a modular backend, reducing debugging time by 50%.",
+          "Improved platform reliability by fixing frontend issues and building reusable UI components for an internal npm registry using Storybook.",
+          "Designed an automated CI pipeline to publish a widget repository to internal Artifactory with testing, linting, type-checking, changesets, and build; reducing manual deployment effort by 80%."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "iCIMS",
+    "companyLogo": "/images/companies/icims.png",
+    "location": "Hyderabad, Telangana",
+    "roles": [
+      {
+        "title": "Software Engineering Intern",
+        "from": "May 2025",
+        "to": "Jul 2025",
+        "highlights": [
+          "Developed a Rule Definition Engine with a form-based UI, reducing task allotment time for candidates by 75%.",
+          "Implemented frontend using ReactJS and integrated with a Spring Boot backend for rule execution."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Centre for Development of Advanced Computing (CDAC)",
+    "companyLogo": "/images/companies/cdac.png",
+    "location": "Kolkata, West Bengal",
+    "roles": [
+      {
+        "title": "SDE Intern",
+        "from": "May 2024",
+        "to": "Jul 2024",
+        "highlights": [
+          "Built a Certificate Management System supporting issuance, renewal, revocation, and validation.",
+          "Developed frontend with ReactJS and backend using NodeJS, ExpressJS, and MongoDB."
+        ]
+      }
+    ]
+  }
+]

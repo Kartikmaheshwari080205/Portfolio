@@ -1,0 +1,11 @@
+{
+  "name": "Kartik Maheshwari",
+  "title": "Software Engineer",
+  "resumeUrl": "/resume/Kartik_Maheshwari_Resume.pdf",
+  "intro": {
+    "profileImage": "/images/profile/profile-picture.jpg",
+    "description": "Computer Science undergraduate at BITS Pilani Hyderabad with hands-on internship experience in platform engineering, frontend reliability, and developer tooling.",
+    "hometown": "Banswara, Rajasthan, India",
+    "currentLocation": "Bangalore, Karnataka, India"
+  }
+}
