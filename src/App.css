@@ -551,6 +551,21 @@ h1 {
   width: 100%;
   display: flex;
   align-items: center;
+  cursor: grab;
+}
+
+.cp-tile:active {
+  cursor: grabbing;
+}
+
+.cp-tile.is-dragging {
+  opacity: 0.55;
+  border-color: color-mix(in srgb, var(--accent) 70%, var(--edge));
+}
+
+.cp-tile.is-drag-over {
+  border-color: color-mix(in srgb, var(--accent) 70%, var(--edge));
+  transform: translateY(-2px) scale(1.01);
 }
 
 .cp-layout {
@@ -593,6 +608,55 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.project-tile {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  cursor: grab;
+}
+
+.project-tile:active {
+  cursor: grabbing;
+}
+
+.project-tile.is-dragging {
+  opacity: 0.55;
+  border-color: color-mix(in srgb, var(--accent) 70%, var(--edge));
+}
+
+.project-tile.is-drag-over {
+  border-color: color-mix(in srgb, var(--accent) 70%, var(--edge));
+  transform: translateY(-2px) scale(1.01);
+}
+
+.project-summary {
+  margin: 0;
+}
+
+.project-highlights {
+  margin: 0.2rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.project-highlights li {
+  margin: 0.2rem 0;
+}
+
+.project-links {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
 }
 
 .sr-only {
@@ -734,6 +798,10 @@ h1 {
   }
 
   .cp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 

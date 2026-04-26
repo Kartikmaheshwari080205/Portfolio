@@ -1,6 +1,7 @@
 import {
   Briefcase,
   Code2,
+  FolderKanban,
   GraduationCap,
   Home,
   Mail,
@@ -13,6 +14,7 @@ const sectionIcons = {
   education: GraduationCap,
   experience: Briefcase,
   'competitive-programming': Code2,
+  projects: FolderKanban,
   contact: Mail,
 }
 

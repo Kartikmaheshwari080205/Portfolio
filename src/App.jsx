@@ -5,6 +5,7 @@ import Antigravity from './components/Antigravity'
 import EducationSection from './components/EducationSection'
 import ExperienceSection from './components/ExperienceSection'
 import CodingPlatformsSection from './components/CodingPlatformsSection'
+import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection'
 import './App.css'
 
@@ -33,12 +34,13 @@ function App() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const [profileRes, educationRes, experienceRes, competitiveRes, contactRes] =
+        const [profileRes, educationRes, experienceRes, competitiveRes, projectsRes, contactRes] =
           await Promise.all([
             fetch('/data/profile.json'),
             fetch('/data/education.json'),
             fetch('/data/experience.json'),
             fetch('/data/competitive-profiles.json'),
+            fetch('/data/projects.json'),
             fetch('/data/contact.json'),
           ])
 
@@ -47,6 +49,7 @@ function App() {
           educationRes,
           experienceRes,
           competitiveRes,
+          projectsRes,
           contactRes,
         ]
 
@@ -54,7 +57,7 @@ function App() {
           throw new Error('Could not load one or more section data files.')
         }
 
-        const [profileJson, educationJson, experienceJson, competitiveJson, contactJson] =
+        const [profileJson, educationJson, experienceJson, competitiveJson, projectsJson, contactJson] =
           await Promise.all(allResponses.map((res) => res.json()))
 
         setData({
@@ -62,6 +65,7 @@ function App() {
           education: educationJson,
           experience: experienceJson,
           competitiveProfiles: competitiveJson,
+          projects: projectsJson,
           contact: contactJson,
         })
       } catch (fetchError) {
@@ -140,6 +144,7 @@ function App() {
       { id: 'education', label: 'Education' },
       { id: 'experience', label: 'Experience' },
       { id: 'competitive-programming', label: 'Coding Platforms' },
+      { id: 'projects', label: 'Projects' },
       { id: 'contact', label: 'Contact' },
     ],
     [],
@@ -157,7 +162,7 @@ function App() {
     )
   }
 
-  const { intro, education, experience, competitiveProfiles, contact, name, title } =
+  const { intro, education, experience, competitiveProfiles, projects, contact, name, title } =
     data
   const antigravityColor = theme === 'light' ? '#7a2d61' : '#b67cff'
 
@@ -202,6 +207,7 @@ function App() {
         <EducationSection education={education} />
         <ExperienceSection experience={experience} />
         <CodingPlatformsSection competitiveProfiles={competitiveProfiles} />
+        <ProjectsSection projects={projects} />
         <ContactSection contact={contact} />
       </main>
       </div>

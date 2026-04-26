@@ -1,0 +1,62 @@
+[
+  {
+    "name": "IPL Playoff Predictor",
+    "summary": "An end-to-end IPL playoff prediction platform with a C++ simulation backend, Python orchestration/API layer, and a React frontend that publishes nightly qualification probabilities for all 10 teams.",
+    "techStack": ["C++17", "Python", "GitHub Actions", "Vercel"],
+    "highlights": [
+      "Built two simulation engines: predictor.cpp with memoization over identical end states and temp.cpp for full branch traversal.",
+      "Designed human-editable inputs (matches.txt and h2h.txt) with strict line-level validation and case-insensitive team parsing.",
+      "Exposed a lightweight API (api_server.py) with health and probabilities endpoints plus unfeasible-state handling for high remaining-match counts.",
+      "Automated nightly orchestration using nightly_job.py to refresh data, apply threshold logic, run predictor, and persist snapshots.",
+      "Implemented GitHub Actions publishing pipeline to push nightly playoff snapshots to the frontend repository only when payload changes.",
+      "Built and deployed a React + Vite frontend on Vercel with automated production deploys from GitHub Actions."
+    ],
+    "liveLink": "https://ipl-playoff-predictor-frontend.vercel.app",
+    "repoLink": "https://github.com/Kartikmaheshwari080205/IPLPlayoffPredictor-backend"
+  },
+  {
+    "name": "Certificate Management System",
+    "summary": "A full-stack system to issue, renew, revoke, and validate certificates through role-based workflows.",
+    "techStack": ["React", "Node.js", "Express", "MongoDB"],
+    "highlights": [
+      "Built end-to-end certificate lifecycle workflows for issuance, renewal, revocation, and verification.",
+      "Developed REST APIs and integrated them with a React frontend for operational and validation flows.",
+      "Implemented reliable data handling for certificate states and status tracking in MongoDB."
+    ]
+  },
+  {
+    "name": "Rule Definition Engine",
+    "summary": "A configurable engine with form-based rule authoring to automate candidate task allotment.",
+    "techStack": ["React", "Java Spring Boot", "REST APIs"],
+    "highlights": [
+      "Built a dynamic UI for creating and managing rule definitions through reusable form components.",
+      "Integrated React frontend with Spring Boot services for rule execution and persistence.",
+      "Reduced candidate task allotment effort by automating assignment logic through configurable rules."
+    ]
+  },
+  {
+    "name": "Diabetes Prediction Application",
+    "summary": "An ML-powered diabetes prediction app that estimates risk from clinical inputs such as age, BMI, glucose, and insulin.",
+    "techStack": ["Python", "Scikit-learn", "NumPy", "Pandas", "Next.js"],
+    "highlights": [
+      "Built predictive models using Naive Bayes and Perceptron architectures.",
+      "Achieved up to 98.36% accuracy across model variants on the dataset.",
+      "Created a simple visualization-driven frontend for interactive prediction outputs."
+    ],
+    "liveLink": "https://diabetes01.vercel.app/",
+    "repoLink": "https://github.com/Mr-Malik-Aryan/Diabetes-predictor"
+  },
+  {
+    "name": "LendVault",
+    "summary": "A decentralized NFT-collateralized peer-to-peer lending platform on Ethereum Sepolia where borrowers use NFTs to secure ETH loans and lenders earn yield.",
+    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Ethers.js", "Solidity", "Prisma", "PostgreSQL"],
+    "highlights": [
+      "Built end-to-end borrowing and lending workflows including loan creation, funding, repayment, and liquidation.",
+      "Integrated smart contracts with MetaMask using Ethers.js and enforced collateral escrow with automated default handling.",
+      "Implemented backend APIs and database models for users, loans, collateral, and on-chain transaction tracking.",
+      "Added real-time platform statistics, risk-aware loan views, and dashboard tracking for active and historical loans."
+    ],
+    "liveLink": "https://lend-vault-eight.vercel.app/",
+    "repoLink": "https://github.com/Mr-Malik-Aryan/LendVault"
+  }
+]
