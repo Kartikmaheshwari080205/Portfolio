@@ -1,3 +1,6 @@
+import Mail from './icons/Mail'
+import Linkedin from './icons/Linkedin'
+
 function ContactSection({ contact }) {
   return (
     <section id="contact" className="card contact-card reveal-section">
@@ -5,18 +8,14 @@ function ContactSection({ contact }) {
       {contact.phone && <p>Phone: {contact.phone}</p>}
       <div className="contact-links-row">
         {contact.email && (
-          <p>
-            <a href={`mailto:${contact.email}`} target="_blank" rel="noreferrer">
-              Email
-            </a>
-          </p>
+          <a href={`mailto:${contact.email}`} target="_blank" rel="noreferrer" className="icon-link" title="Email">
+            <Mail size={24} />
+          </a>
         )}
         {contact.linkedin && (
-          <p>
-            <a href={contact.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-          </p>
+          <a href={contact.linkedin} target="_blank" rel="noreferrer" className="icon-link" title="LinkedIn">
+            <Linkedin size={24} />
+          </a>
         )}
       </div>
       {contact.github && (
