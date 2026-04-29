@@ -9,9 +9,9 @@
         "from": "Jan 2026",
         "to": "Present",
         "highlights": [
-          "Built a Log Ingestion Proxy using Python, OpenTelemetry (OTLP), and SigNoz with a modular backend, reducing debugging time by 50%.",
-          "Improved platform reliability by fixing frontend issues and building reusable UI components for an internal npm registry using Storybook.",
-          "Designed an automated CI pipeline to publish a widget repository to internal Artifactory with testing, linting, type-checking, changesets, and build; reducing manual deployment effort by 80%."
+          "Built a Log Ingestion Proxy using Python, OpenTelemetry (OTLP) and SigNoz, with a modular backend, enabling centralized observability and reducing debugging time by 50%.",
+          "Improved platform reliability by fixing frontend issues and building reusable UI components for an internal npm registry using Storybook, enhancing user experience.",
+          "Designed an automated CI pipeline to publish a widget repository to internal Artifactory, integrating testing, linting, type-checking, changesets, and build, reducing manual deployment effort by 80%."
         ]
       }
     ]
