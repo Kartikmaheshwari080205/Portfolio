@@ -11,7 +11,7 @@
       "Implemented GitHub Actions publishing pipeline to push nightly playoff snapshots to the frontend repository only when payload changes.",
       "Built and deployed a React + Vite frontend on Vercel with automated production deploys from GitHub Actions."
     ],
-    "liveLink": "https://ipl-playoff-predictor-frontend.vercel.app",
+    "liveLink": "https://ipl-playoff-predictor-eta.vercel.app",
     "repoLink": "https://github.com/Kartikmaheshwari080205/IPLPlayoffPredictor-backend"
   },
   {
