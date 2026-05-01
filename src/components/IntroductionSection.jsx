@@ -13,11 +13,11 @@ function IntroductionSection({ intro, name }) {
         <h1 className="section-title">{name}</h1>
         <p className="intro-text">{intro.description}</p>
         <p className="intro-meta">
-          <Home size={16} aria-hidden="true" />
+          <Home size="0.95rem" aria-hidden="true" />
           <span>{intro.hometown}</span>
         </p>
         <p className="intro-meta">
-          <MapPin size={16} aria-hidden="true" />
+          <MapPin size="0.95rem" aria-hidden="true" />
           <span>{intro.currentLocation}</span>
         </p>
       </div>

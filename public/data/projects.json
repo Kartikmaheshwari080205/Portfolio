@@ -4,12 +4,10 @@
     "summary": "An end-to-end IPL playoff prediction platform with a C++ simulation backend, Python orchestration/API layer, and a React frontend that publishes nightly qualification probabilities for all 10 teams.",
     "techStack": ["C++17", "Python", "GitHub Actions", "Vercel"],
     "highlights": [
-      "Built two simulation engines: predictor.cpp with memoization over identical end states and temp.cpp for full branch traversal.",
-      "Designed human-editable inputs (matches.txt and h2h.txt) with strict line-level validation and case-insensitive team parsing.",
-      "Exposed a lightweight API (api_server.py) with health and probabilities endpoints plus unfeasible-state handling for high remaining-match counts.",
-      "Automated nightly orchestration using nightly_job.py to refresh data, apply threshold logic, run predictor, and persist snapshots.",
-      "Implemented GitHub Actions publishing pipeline to push nightly playoff snapshots to the frontend repository only when payload changes.",
-      "Built and deployed a React + Vite frontend on Vercel with automated production deploys from GitHub Actions."
+      "Built two simulation engines for playoff outcomes.",
+      "Designed editable match inputs with validation and case-insensitive team parsing.",
+      "Exposed a lightweight API and nightly job to refresh probabilities.",
+      "Published updates with GitHub Actions and deployed the frontend on Vercel."
     ],
     "liveLink": "https://ipl-playoff-predictor-eta.vercel.app",
     "repoLink": "https://github.com/Kartikmaheshwari080205/IPLPlayoffPredictor-backend"

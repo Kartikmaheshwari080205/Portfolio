@@ -9,12 +9,12 @@ function ContactSection({ contact }) {
       <div className="contact-links-row">
         {contact.email && (
           <a href={`mailto:${contact.email}`} target="_blank" rel="noreferrer" className="icon-link" title="Email">
-            <Mail size={24} />
+            <Mail size="1.35rem" />
           </a>
         )}
         {contact.linkedin && (
           <a href={contact.linkedin} target="_blank" rel="noreferrer" className="icon-link" title="LinkedIn">
-            <Linkedin size={24} />
+            <Linkedin size="1.35rem" />
           </a>
         )}
       </div>
