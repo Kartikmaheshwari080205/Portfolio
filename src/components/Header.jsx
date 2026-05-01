@@ -86,7 +86,11 @@ function Header({ name, title, sections, theme, onThemeToggle }) {
       </header>
 
       {mobileMenuOpen && (
-        <div className="mobile-menu-overlay" onClick={() => setMobileMenuOpen(false)} aria-hidden="true" />
+        <div
+          className="mobile-menu-overlay open"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
       )}
 
       <nav
