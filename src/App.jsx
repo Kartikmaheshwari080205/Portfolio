@@ -162,8 +162,17 @@ function App() {
     )
   }
 
-  const { intro, education, experience, competitiveProfiles, projects, contact, name, title } =
-    data
+  const {
+    intro,
+    education,
+    experience,
+    competitiveProfiles,
+    projects,
+    contact,
+    name,
+    title,
+    resumeUrl,
+  } = data
   const antigravityColor = theme === 'light' ? '#7a2d61' : '#b67cff'
 
   return (
@@ -199,6 +208,7 @@ function App() {
         title={title}
         sections={sections}
         theme={theme}
+        resumeUrl={resumeUrl}
         onThemeToggle={() => setTheme((current) => (current === 'light' ? 'dark' : 'light'))}
       />
 

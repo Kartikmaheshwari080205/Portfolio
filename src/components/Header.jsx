@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import {
   Briefcase,
+  Download,
   Code2,
   FolderKanban,
   GraduationCap,
   Home,
   Mail,
+  FileText,
   Menu,
   Moon,
   Sun,
@@ -21,8 +23,9 @@ const sectionIcons = {
   contact: Mail,
 }
 
-function Header({ name, title, sections, theme, onThemeToggle }) {
+function Header({ name, title, sections, theme, onThemeToggle, resumeUrl }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const resumeHref = resumeUrl || '/resume/Kartik_Maheshwari_Resume.pdf'
 
   const handleSectionJump = (event, sectionId) => {
     event.preventDefault()
@@ -72,6 +75,25 @@ function Header({ name, title, sections, theme, onThemeToggle }) {
                 })()}
               </a>
             ))}
+            <a
+              href={resumeHref}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="View resume"
+              title="View resume"
+              className="nav-icon-link resume-nav-link"
+            >
+              <FileText size="1.2rem" aria-hidden="true" />
+            </a>
+            <a
+              href={resumeHref}
+              download
+              aria-label="Download resume"
+              title="Download resume"
+              className="nav-icon-link resume-nav-link"
+            >
+              <Download size="1.2rem" aria-hidden="true" />
+            </a>
           </nav>
 
           <button
@@ -117,6 +139,25 @@ function Header({ name, title, sections, theme, onThemeToggle }) {
             })()}
           </a>
         ))}
+        <a
+          href={resumeHref}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="View resume"
+          className="mobile-menu-link"
+        >
+          <FileText size="1.2rem" aria-hidden="true" />
+          <span>Resume</span>
+        </a>
+        <a
+          href={resumeHref}
+          download
+          aria-label="Download resume"
+          className="mobile-menu-link"
+        >
+          <Download size="1.2rem" aria-hidden="true" />
+          <span>Download Resume</span>
+        </a>
       </nav>
     </>
   )
