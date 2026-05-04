@@ -9,6 +9,39 @@ import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection'
 import './App.css'
 
+const getCodeforcesHandle = (profileLink) => {
+  if (!profileLink) {
+    return ''
+  }
+
+  try {
+    const { pathname } = new URL(profileLink)
+    const segments = pathname.split('/').filter(Boolean)
+
+    return segments[segments.length - 1] || ''
+  } catch {
+    return ''
+  }
+}
+
+const fetchCodeforcesStats = async (handle) => {
+  const response = await fetch(
+    `https://codeforces.com/api/user.info?handles=${encodeURIComponent(handle)}`,
+  )
+
+  if (!response.ok) {
+    return null
+  }
+
+  const payload = await response.json()
+
+  if (payload.status !== 'OK' || !Array.isArray(payload.result) || payload.result.length === 0) {
+    return null
+  }
+
+  return payload.result[0]
+}
+
 function App() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -60,11 +93,42 @@ function App() {
         const [profileJson, educationJson, experienceJson, competitiveJson, projectsJson, contactJson] =
           await Promise.all(allResponses.map((res) => res.json()))
 
+        const competitiveProfiles = await Promise.all(
+          competitiveJson.map(async (profile) => {
+            if (profile.platform !== 'Codeforces') {
+              return profile
+            }
+
+            const handle = getCodeforcesHandle(profile.profileLink)
+
+            if (!handle) {
+              return profile
+            }
+
+            try {
+              const codeforcesStats = await fetchCodeforcesStats(handle)
+
+              if (!codeforcesStats) {
+                return profile
+              }
+
+              return {
+                ...profile,
+                rating: codeforcesStats.rating?.toString() || 'Unrated',
+                bestMetricLabel: 'Max Rating',
+                bestMetricValue: codeforcesStats.maxRating?.toString() || profile.bestMetricValue,
+              }
+            } catch {
+              return profile
+            }
+          }),
+        )
+
         setData({
           ...profileJson,
           education: educationJson,
           experience: experienceJson,
-          competitiveProfiles: competitiveJson,
+          competitiveProfiles,
           projects: projectsJson,
           contact: contactJson,
         })
