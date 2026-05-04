@@ -9,21 +9,6 @@ import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection'
 import './App.css'
 
-const getCodeforcesHandle = (profileLink) => {
-  if (!profileLink) {
-    return ''
-  }
-
-  try {
-    const { pathname } = new URL(profileLink)
-    const segments = pathname.split('/').filter(Boolean)
-
-    return segments[segments.length - 1] || ''
-  } catch {
-    return ''
-  }
-}
-
 const fetchCodeforcesStats = async (handle) => {
   const response = await fetch(
     `https://codeforces.com/api/user.info?handles=${encodeURIComponent(handle)}`,
@@ -40,6 +25,39 @@ const fetchCodeforcesStats = async (handle) => {
   }
 
   return payload.result[0]
+}
+
+const getPlatformHandle = (profileLink) => {
+  if (!profileLink) {
+    return ''
+  }
+
+  try {
+    const { pathname } = new URL(profileLink)
+    const segments = pathname.split('/').filter(Boolean)
+
+    return segments[segments.length - 1] || ''
+  } catch {
+    return ''
+  }
+}
+
+const fetchCodermeStats = async (platform, handle) => {
+  const response = await fetch(
+    `https://coderme.crimsontwilight.in/${platform}/${encodeURIComponent(handle)}`,
+  )
+
+  if (!response.ok) {
+    return null
+  }
+
+  const payload = await response.json()
+
+  if (typeof payload?.rating !== 'number') {
+    return null
+  }
+
+  return payload
 }
 
 function App() {
@@ -95,28 +113,56 @@ function App() {
 
         const competitiveProfiles = await Promise.all(
           competitiveJson.map(async (profile) => {
-            if (profile.platform !== 'Codeforces') {
+            if (profile.platform === 'Codeforces') {
+              const handle = getPlatformHandle(profile.profileLink)
+
+              if (!handle) {
+                return profile
+              }
+
+              try {
+                const codeforcesStats = await fetchCodeforcesStats(handle)
+
+                if (!codeforcesStats) {
+                  return profile
+                }
+
+                return {
+                  ...profile,
+                  rating: codeforcesStats.rating?.toString() || 'Unrated',
+                  bestMetricLabel: 'Max Rating',
+                  bestMetricValue: codeforcesStats.maxRating?.toString() || profile.bestMetricValue,
+                }
+              } catch {
+                return profile
+              }
+            }
+
+            if (profile.platform !== 'CodeChef' && profile.platform !== 'LeetCode') {
               return profile
             }
 
-            const handle = getCodeforcesHandle(profile.profileLink)
+            const handle = getPlatformHandle(profile.profileLink)
 
             if (!handle) {
               return profile
             }
 
             try {
-              const codeforcesStats = await fetchCodeforcesStats(handle)
+              const codermeStats = await fetchCodermeStats(
+                profile.platform.toLowerCase(),
+                handle,
+              )
 
-              if (!codeforcesStats) {
+              if (!codermeStats) {
                 return profile
               }
 
               return {
                 ...profile,
-                rating: codeforcesStats.rating?.toString() || 'Unrated',
-                bestMetricLabel: 'Max Rating',
-                bestMetricValue: codeforcesStats.maxRating?.toString() || profile.bestMetricValue,
+                rating: codermeStats.rating.toString(),
+                bestMetricLabel: profile.bestMetricLabel,
+                bestMetricValue: profile.bestMetricValue,
               }
             } catch {
               return profile
