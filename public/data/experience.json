@@ -7,7 +7,7 @@
       {
         "title": "SDE Intern",
         "from": "Jan 2026",
-        "to": "Present",
+        "to": "June 2026",
         "highlights": [
           "Built a Log Ingestion Proxy using Python, OpenTelemetry (OTLP) and SigNoz, with a modular backend, enabling centralized observability and reducing debugging time by 50%.",
           "Improved platform reliability by fixing frontend issues and building reusable UI components for an internal npm registry using Storybook, enhancing user experience.",
