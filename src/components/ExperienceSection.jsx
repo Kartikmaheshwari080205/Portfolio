@@ -40,6 +40,17 @@ function ExperienceSection({ experience }) {
                   <p className="timeline">
                     {role.from} - {role.to}
                   </p>
+                  {Array.isArray(role.toolsTechUsed) && role.toolsTechUsed.length > 0 ? (
+                    <div className="role-tools">
+                      <ul className="tech-chip-list">
+                        {role.toolsTechUsed.map((tool) => (
+                          <li key={tool} className="tech-chip">
+                            {tool}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
                   <ul className="role-list">
                     {role.highlights.map((point) => (
                       <li key={point}>{point}</li>

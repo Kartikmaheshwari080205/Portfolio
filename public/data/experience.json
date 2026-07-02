@@ -9,9 +9,22 @@
         "from": "Jan 2026",
         "to": "June 2026",
         "highlights": [
-          "Built a Log Ingestion Proxy using Python, OpenTelemetry (OTLP) and SigNoz, with a modular backend, enabling centralized observability and reducing debugging time by 50%.",
-          "Improved platform reliability by fixing frontend issues and building reusable UI components for an internal npm registry using Storybook, enhancing user experience.",
-          "Designed an automated CI pipeline to publish a widget repository to internal Artifactory, integrating testing, linting, type-checking, changesets, and build, reducing manual deployment effort by 80%."
+          "Built a Log Ingestion Proxy in Python using OpenTelemetry (OTLP) and SigNoz to centralize frontend observability and improve debugging.",
+          "Contributed to the Ask-Nielsen Platform frontend by improving core user workflows and developing reusable widgets for the platform and widget registry.",
+          "Automated CI/CD and quality engineering across frontend and widget registry repositories, including testing, coverage validation, versioning, documentation deployment, and package publishing."
+        ],
+        "toolsTechUsed": [
+          "Python",
+          "OpenTelemetry",
+          "OTLP",
+          "SigNoz",
+          "React",
+          "Storybook",
+          "Vitest",
+          "Changesets",
+          "GitLab CI/CD",
+          "GitLab Pages",
+          "Artifactory"
         ]
       }
     ]
@@ -28,7 +41,8 @@
         "highlights": [
           "Developed a Rule Definition Engine with a form-based UI, reducing task allotment time for candidates by 75%.",
           "Implemented frontend using ReactJS and integrated with a Spring Boot backend for rule execution."
-        ]
+        ],
+        "toolsTechUsed": ["ReactJS", "Spring Boot"]
       }
     ]
   },
@@ -44,7 +58,8 @@
         "highlights": [
           "Built a Certificate Management System supporting issuance, renewal, revocation, and validation.",
           "Developed frontend with ReactJS and backend using NodeJS, ExpressJS, and MongoDB."
-        ]
+        ],
+        "toolsTechUsed": ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"]
       }
     ]
   }
