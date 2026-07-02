@@ -15,16 +15,18 @@
         ],
         "toolsTechUsed": [
           "Python",
+          "GitLab",
           "OpenTelemetry",
-          "OTLP",
-          "SigNoz",
-          "React",
-          "Storybook",
-          "Vitest",
-          "Changesets",
-          "GitLab CI/CD",
-          "GitLab Pages",
-          "Artifactory"
+          "Node.js",
+          "React.js",
+          "JavaScript",
+          "FastAPI",
+          "API Development",
+          "Microservices",
+          "TypeScript",
+          "Docker",
+          "CI/CD",
+          "Git"
         ]
       }
     ]
@@ -42,7 +44,17 @@
           "Developed a Rule Definition Engine with a form-based UI, reducing task allotment time for candidates by 75%.",
           "Implemented frontend using ReactJS and integrated with a Spring Boot backend for rule execution."
         ],
-        "toolsTechUsed": ["ReactJS", "Spring Boot"]
+        "toolsTechUsed": [
+          "Node.js",
+          "Java",
+          "Bitbucket",
+          "Git",
+          "CSS",
+          "HTML",
+          "PostgreSQL",
+          "React.js",
+          "JavaScript"
+        ]
       }
     ]
   },
@@ -59,7 +71,16 @@
           "Built a Certificate Management System supporting issuance, renewal, revocation, and validation.",
           "Developed frontend with ReactJS and backend using NodeJS, ExpressJS, and MongoDB."
         ],
-        "toolsTechUsed": ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"]
+        "toolsTechUsed": [
+          "Embedded JavaScript",
+          "Node.js",
+          "MongoDB",
+          "CSS",
+          "HTML",
+          "Bootstrap",
+          "React.js",
+          "JavaScript"
+        ]
       }
     ]
   }
