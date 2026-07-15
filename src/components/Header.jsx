@@ -25,7 +25,7 @@ const sectionIcons = {
 
 function Header({ name, title, sections, theme, onThemeToggle, resumeUrl }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const resumeHref = resumeUrl || '/resume/Kartik_Maheshwari_Resume.pdf'
+  const resumeHref = resumeUrl || '/resume/Kartik_Resume.pdf'
 
   const handleSectionJump = (event, sectionId) => {
     event.preventDefault()

@@ -1,11 +1,25 @@
 [
   {
+    "company": "Jupiter Money",
+    "companyLogo": "/images/companies/jupiter.png",
+    "location": "Bengaluru, Karnataka",
+    "roles": [
+      {
+        "title": "Software Development Engineer I",
+        "from": "July 2026",
+        "to": "Present",
+        "highlights": [],
+        "toolsTechUsed": []
+      }
+    ]
+  },
+  {
     "company": "Nielsen",
     "companyLogo": "/images/companies/nielsen.png",
     "location": "Bengaluru, Karnataka",
     "roles": [
       {
-        "title": "SDE Intern",
+        "title": "Software Development Engineering Intern",
         "from": "Jan 2026",
         "to": "June 2026",
         "highlights": [
@@ -42,7 +56,7 @@
         "to": "Jul 2025",
         "highlights": [
           "Developed a Rule Definition Engine with a form-based UI, reducing task allotment time for candidates by 75%.",
-          "Implemented frontend using ReactJS and integrated with a Spring Boot backend for rule execution."
+          "Implemented frontend using React.js and integrated with a Spring Boot backend for rule execution."
         ],
         "toolsTechUsed": [
           "Node.js",
@@ -59,17 +73,17 @@
     ]
   },
   {
-    "company": "Centre for Development of Advanced Computing (CDAC)",
+    "company": "Centre for Development of Advanced Computing (C-DAC)",
     "companyLogo": "/images/companies/cdac.png",
     "location": "Kolkata, West Bengal",
     "roles": [
       {
-        "title": "SDE Intern",
+        "title": "Software Engineering Intern",
         "from": "May 2024",
         "to": "Jul 2024",
         "highlights": [
           "Built a Certificate Management System supporting issuance, renewal, revocation, and validation.",
-          "Developed frontend with ReactJS and backend using NodeJS, ExpressJS, and MongoDB."
+          "Developed frontend with React.js and backend using Node.js, Express.js, and MongoDB."
         ],
         "toolsTechUsed": [
           "Embedded JavaScript",
@@ -79,7 +93,8 @@
           "HTML",
           "Bootstrap",
           "React.js",
-          "JavaScript"
+          "JavaScript",
+          "Express.js"
         ]
       }
     ]
