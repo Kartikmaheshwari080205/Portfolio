@@ -3,7 +3,8 @@
     "platform": "Codeforces",
     "logo": "/images/platforms/codeforces.png",
     "bestMetricLabel": "Max Rating",
-    "profileLink": "https://codeforces.com/profile/Dogforces"
+    "profileLink": "https://codeforces.com/profile/Dogforces",
+    "handle": "Dogforces"
   },
   {
     "platform": "LeetCode",
@@ -11,7 +12,8 @@
     "rating": "2063",
     "bestMetricLabel": "Global Rank Band",
     "bestMetricValue": "Top 1.90%",
-    "profileLink": "https://leetcode.com/u/Dawgcode/"
+    "profileLink": "https://leetcode.com/u/Dawgcode/",
+    "handle": "Dawgcode"
   },
   {
     "platform": "CodeChef",
@@ -19,13 +21,15 @@
     "rating": "1546",
     "bestMetricLabel": "Star Level",
     "bestMetricValue": "2 Star",
-    "profileLink": "https://www.codechef.com/users/dogforces"
+    "profileLink": "https://www.codechef.com/users/dogforces",
+    "handle": "dogforces"
   },
   {
     "platform": "GitHub",
     "logo": "/images/platforms/github.png",
     "bestMetricLabel": "Focus",
     "bestMetricValue": "Projects & Open Source",
-    "profileLink": "https://github.com/Kartikmaheshwari080205"
+    "profileLink": "https://github.com/Kartikmaheshwari080205",
+    "handle": "Kartikmaheshwari080205"
   }
 ]

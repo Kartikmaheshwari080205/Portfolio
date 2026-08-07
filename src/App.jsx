@@ -326,7 +326,7 @@ function App() {
         <IntroductionSection intro={intro} name={name} />
         <EducationSection education={education} />
         <ExperienceSection experience={experience} />
-        <CodingPlatformsSection competitiveProfiles={competitiveProfiles} />
+        <CodingPlatformsSection competitiveProfiles={competitiveProfiles} theme={theme} />
         <ProjectsSection projects={projects} />
         <ContactSection contact={contact} />
       </main>

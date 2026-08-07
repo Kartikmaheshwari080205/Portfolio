@@ -738,6 +738,70 @@ h1 {
   gap: 0.75rem;
 }
 
+.codeforces-graph-shell {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.codeforces-graph-header h3 {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 1.12rem;
+}
+
+.codeforces-graph-header p {
+  margin: 0.25rem 0 0;
+  opacity: 0.82;
+}
+
+.codeforces-graph-card {
+  border: 1px solid var(--edge);
+  border-radius: 0.85rem;
+  background: var(--card);
+  box-shadow: var(--soft-shadow);
+  padding: 10px;
+}
+
+.codeforces-graph-canvas-wrap,
+.codeforces-graph-state {
+  position: relative;
+  z-index: 1;
+}
+
+.codeforces-graph-canvas-wrap {
+  height: 340px;
+  min-height: 340px;
+}
+
+.codeforces-graph-state {
+  min-height: clamp(20rem, 46vw, 29rem);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+.codeforces-graph-state p {
+  margin: 0 0 0.75rem;
+}
+
+.codeforces-graph-retry {
+  border: 1px solid var(--edge);
+  border-radius: 0.5rem;
+  background: var(--card-soft);
+  color: var(--text);
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.codeforces-graph-retry:hover {
+  border-color: var(--accent);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
@@ -970,6 +1034,11 @@ h1 {
 
   .cp-grid {
     grid-template-columns: 1fr;
+  }
+
+  .codeforces-graph-canvas-wrap,
+  .codeforces-graph-state {
+    min-height: 18rem;
   }
 
   .projects-grid {

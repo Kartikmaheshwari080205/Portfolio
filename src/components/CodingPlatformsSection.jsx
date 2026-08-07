@@ -1,10 +1,30 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import CodeforcesGraph from './CodeforcesGraph'
 
-function CodingPlatformsSection({ competitiveProfiles }) {
+function CodingPlatformsSection({ competitiveProfiles, theme }) {
   const [orderedProfiles, setOrderedProfiles] = useState(competitiveProfiles)
   const [dragOverIndex, setDragOverIndex] = useState(null)
   const [draggingIndex, setDraggingIndex] = useState(null)
   const draggedIndexRef = useRef(null)
+
+  const codeforcesHandle = useMemo(() => {
+    const codeforcesProfile = orderedProfiles.find((profile) => profile.platform === 'Codeforces')
+
+    if (!codeforcesProfile) {
+      return ''
+    }
+
+    if (codeforcesProfile.handle) {
+      return codeforcesProfile.handle
+    }
+
+    try {
+      const { pathname } = new URL(codeforcesProfile.profileLink)
+      return pathname.split('/').filter(Boolean).at(-1) || ''
+    } catch {
+      return ''
+    }
+  }, [orderedProfiles])
 
   useEffect(() => {
     setOrderedProfiles(competitiveProfiles)
@@ -87,6 +107,7 @@ function CodingPlatformsSection({ competitiveProfiles }) {
           </article>
         ))}
       </div>
+      <CodeforcesGraph handle={codeforcesHandle} theme={theme} />
     </section>
   )
 }
