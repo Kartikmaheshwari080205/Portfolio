@@ -28,18 +28,6 @@ const getRatingColor = (rating) => {
   return '#808080'
 }
 
-const getChartColors = (theme) => {
-  if (theme === 'dark') {
-    return {
-      text: '#f1e8ff',
-    }
-  }
-
-  return {
-    text: '#421c37',
-  }
-}
-
 const codeforcesBandsPlugin = {
   id: 'codeforcesBands',
   beforeDatasetsDraw(chart) {
@@ -83,7 +71,7 @@ const codeforcesBandsPlugin = {
   },
 }
 
-function CodeforcesGraph({ handle, theme }) {
+function CodeforcesGraph({ handle }) {
   const [ratingHistory, setRatingHistory] = useState([])
   const [loading, setLoading] = useState(Boolean(handle))
   const [error, setError] = useState('')
@@ -172,7 +160,6 @@ function CodeforcesGraph({ handle, theme }) {
   }, [ratingHistory])
 
   const chartOptions = useMemo(() => {
-    const chartColors = getChartColors(theme)
     const ratings = ratingHistory
       .map((entry) => entry.newRating)
       .filter((rating) => Number.isFinite(rating))
@@ -228,7 +215,7 @@ function CodeforcesGraph({ handle, theme }) {
             display: false,
           },
           ticks: {
-            color: chartColors.text,
+            color: '#333333',
             maxRotation: 0,
             autoSkip: true,
           },
@@ -242,7 +229,7 @@ function CodeforcesGraph({ handle, theme }) {
           ticks: {
             color(context) {
               const band = codeforcesBands.find(({ min }) => min === context.tick.value)
-              return band?.color || chartColors.text
+              return band?.color || '#333333'
             },
             stepSize: 100,
             callback(value) {
@@ -255,7 +242,7 @@ function CodeforcesGraph({ handle, theme }) {
         },
       },
     }
-  }, [ratingHistory, theme])
+  }, [ratingHistory])
 
   if (!handle) {
     return null

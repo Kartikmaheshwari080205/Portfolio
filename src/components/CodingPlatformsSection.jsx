@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import CodeforcesGraph from './CodeforcesGraph'
 
-function CodingPlatformsSection({ competitiveProfiles, theme }) {
+function CodingPlatformsSection({ competitiveProfiles }) {
   const [orderedProfiles, setOrderedProfiles] = useState(competitiveProfiles)
   const [dragOverIndex, setDragOverIndex] = useState(null)
   const [draggingIndex, setDraggingIndex] = useState(null)
@@ -107,7 +107,7 @@ function CodingPlatformsSection({ competitiveProfiles, theme }) {
           </article>
         ))}
       </div>
-      <CodeforcesGraph handle={codeforcesHandle} theme={theme} />
+      <CodeforcesGraph handle={codeforcesHandle} />
     </section>
   )
 }

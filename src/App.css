@@ -758,7 +758,7 @@ h1 {
 .codeforces-graph-card {
   border: 1px solid var(--edge);
   border-radius: 0.85rem;
-  background: var(--card);
+  background: #ffffff;
   box-shadow: var(--soft-shadow);
   padding: 10px;
 }
