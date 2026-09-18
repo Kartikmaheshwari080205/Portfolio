@@ -2,6 +2,7 @@
   {
     "platform": "Codeforces",
     "logo": "/images/platforms/codeforces.png",
+    "level": "Expert",
     "bestMetricLabel": "Max Rating",
     "profileLink": "https://codeforces.com/profile/Dogforces",
     "handle": "Dogforces"
@@ -9,9 +10,10 @@
   {
     "platform": "LeetCode",
     "logo": "/images/platforms/leetcode.png",
-    "rating": "2063",
+    "level": "Guardian",
+    "rating": "2253",
     "bestMetricLabel": "Global Rank Band",
-    "bestMetricValue": "Top 1.90%",
+    "bestMetricValue": "Top 0.7%",
     "profileLink": "https://leetcode.com/u/Dawgcode/",
     "handle": "Dawgcode"
   },

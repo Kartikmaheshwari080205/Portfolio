@@ -96,6 +96,7 @@ function CodingPlatformsSection({ competitiveProfiles }) {
                     {profile.platform}
                   </a>
                 </h3>
+                {profile.level && <p>Max Level: {profile.level}</p>}
                 {profile.rating && <p>Current Rating: {profile.rating}</p>}
                 {profile.bestMetricLabel && profile.bestMetricValue && (
                   <p>
