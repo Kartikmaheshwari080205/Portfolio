@@ -3,21 +3,27 @@ function LeetCodeStatsCard({ handle }) {
     return null
   }
 
-  const statsUrl = `https://leetcard.jacoblin.cool/${encodeURIComponent(handle)}?theme=light&font=Source%20Serif%20Pro`
+  const cardUrl = `https://leetcard.jacoblin.cool/${encodeURIComponent(handle)}`
+  const contestParams = new URLSearchParams({
+    theme: 'light',
+    font: 'Source Serif Pro',
+    ext: 'contest',
+  })
+  const contestUrl = `${cardUrl}?${contestParams}`
 
   return (
     <section className="leetcode-stats-shell" aria-labelledby="leetcode-stats-title">
       <div className="leetcode-stats-header">
         <div>
-          <h3 id="leetcode-stats-title">LeetCode Stats</h3>
+          <h3 id="leetcode-stats-title">LeetCode Stats &amp; Contest Rating</h3>
           <p>{handle}</p>
         </div>
       </div>
 
       <div className="leetcode-stats-card">
         <img
-          src={statsUrl}
-          alt={`${handle} LeetCode statistics`}
+          src={contestUrl}
+          alt={`${handle} LeetCode contest rating history`}
           className="leetcode-stats-image"
         />
       </div>
