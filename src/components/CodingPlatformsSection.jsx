@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import CodeforcesGraph from './CodeforcesGraph'
+import LeetCodeStatsCard from './LeetCodeStatsCard'
 
 function CodingPlatformsSection({ competitiveProfiles }) {
   const [orderedProfiles, setOrderedProfiles] = useState(competitiveProfiles)
@@ -20,6 +21,25 @@ function CodingPlatformsSection({ competitiveProfiles }) {
 
     try {
       const { pathname } = new URL(codeforcesProfile.profileLink)
+      return pathname.split('/').filter(Boolean).at(-1) || ''
+    } catch {
+      return ''
+    }
+  }, [orderedProfiles])
+
+  const leetCodeHandle = useMemo(() => {
+    const leetCodeProfile = orderedProfiles.find((profile) => profile.platform === 'LeetCode')
+
+    if (!leetCodeProfile) {
+      return ''
+    }
+
+    if (leetCodeProfile.handle) {
+      return leetCodeProfile.handle
+    }
+
+    try {
+      const { pathname } = new URL(leetCodeProfile.profileLink)
       return pathname.split('/').filter(Boolean).at(-1) || ''
     } catch {
       return ''
@@ -109,6 +129,7 @@ function CodingPlatformsSection({ competitiveProfiles }) {
         ))}
       </div>
       <CodeforcesGraph handle={codeforcesHandle} />
+      <LeetCodeStatsCard handle={leetCodeHandle} />
     </section>
   )
 }

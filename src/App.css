@@ -802,6 +802,39 @@ h1 {
   border-color: var(--accent);
 }
 
+.leetcode-stats-shell {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.leetcode-stats-header h3 {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 1.12rem;
+}
+
+.leetcode-stats-header p {
+  margin: 0.25rem 0 0;
+  opacity: 0.82;
+}
+
+.leetcode-stats-card {
+  border: 1px solid var(--edge);
+  border-radius: 0.85rem;
+  background: #ffffff;
+  box-shadow: var(--soft-shadow);
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.leetcode-stats-image {
+  display: block;
+  width: 100%;
+  min-width: 560px;
+  height: auto;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
