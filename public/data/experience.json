@@ -8,8 +8,27 @@
         "title": "Software Development Engineer I",
         "from": "July 2026",
         "to": "Present",
-        "highlights": [],
-        "toolsTechUsed": []
+        "highlights": [
+          "Automated dispute-resolution workflows to reduce open cases from 13,000+ to ~400 while cutting handling time by 50% through cron-driven automation and internal APIs.",
+          "Built CRUD APIs and a Retool dashboard for real-time EMI Store configuration updates without redeployment, enabling faster operational changes.",
+          "Developed a multi-vendor dashboard for vendor onboarding, product approvals, activity tracking, and order monitoring to reduce manual forwarding and improve operational visibility.",
+          "Worked on LLM-powered salary credit detection to identify and classify salary transactions."
+        ],
+        "toolsTechUsed": [
+          "API Development",
+          "Python",
+          "Java",
+          "Kotlin",
+          "PostgreSQL",
+          "Databricks",
+          "Apache Airflow",
+          "Docker",
+          "Kubernetes",
+          "TypeScript",
+          "React",
+          "GitHub",
+          "Git"
+        ]
       }
     ]
   },
@@ -29,17 +48,17 @@
         ],
         "toolsTechUsed": [
           "Python",
-          "GitLab",
           "OpenTelemetry",
-          "Node.js",
-          "React.js",
-          "JavaScript",
           "FastAPI",
+          "Node.js",
           "API Development",
           "Microservices",
           "TypeScript",
+          "React.js",
+          "JavaScript",
           "Docker",
           "CI/CD",
+          "GitLab",
           "Git"
         ]
       }
@@ -59,15 +78,15 @@
           "Implemented frontend using React.js and integrated with a Spring Boot backend for rule execution."
         ],
         "toolsTechUsed": [
-          "Node.js",
           "Java",
-          "Bitbucket",
-          "Git",
-          "CSS",
-          "HTML",
-          "PostgreSQL",
           "React.js",
-          "JavaScript"
+          "Node.js",
+          "PostgreSQL",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Git",
+          "Bitbucket"
         ]
       }
     ]
@@ -86,15 +105,15 @@
           "Developed frontend with React.js and backend using Node.js, Express.js, and MongoDB."
         ],
         "toolsTechUsed": [
-          "Embedded JavaScript",
           "Node.js",
-          "MongoDB",
-          "CSS",
-          "HTML",
-          "Bootstrap",
+          "Express.js",
           "React.js",
+          "MongoDB",
           "JavaScript",
-          "Express.js"
+          "HTML",
+          "CSS",
+          "Bootstrap",
+          "Embedded JavaScript"
         ]
       }
     ]
